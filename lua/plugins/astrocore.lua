@@ -42,6 +42,7 @@ return {
       n = {
         -- second key is the lefthand side of the map
         ["<Leader>T"] = { "<cmd>TodoTelescope<cr>", desc = "Ver TODO's" },
+        ["<Leader>J"] = { "<cmd>JestFile<cr>", desc = "Ejecuta Jest.js en el archivo actual" },
 
         -- navigate buffer tabs with `H` and `L`
         L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
