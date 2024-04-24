@@ -41,7 +41,6 @@ return {
       -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
-        ["<Leader>T"] = { "<cmd>TodoTelescope<cr>", desc = "Ver TODO's" },
         ["<Leader>J"] = { "<cmd>JestFile<cr>", desc = "Ejecuta Jest.js en el archivo actual" },
 
         -- navigate buffer tabs with `H` and `L`
@@ -60,6 +59,13 @@ return {
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },
+        ["<Leader>T"] = { desc = "Todo Comments" },
+        ["<Leader>Ta"] = { "<cmd>TodoTelescope<cr>", desc = "View all Comments" },
+        ["<Leader>Tt"] = { "<cmd>TodoTelescope keywords=TODO<cr>", desc = "View TODO's only" },
+        ["<Leader>Tf"] = { "<cmd>TodoTelescope keywords=FIX,FIXME,BUG,FIXIT,ISSUE<cr>", desc = "View FIXME" },
+        ["<Leader>Th"] = { "<cmd>TodoTelescope keywords=HACK<cr>", desc = "View Hacks and Bicycles" },
+        ["<Leader>Tw"] = { "<cmd>TodoTelescope keywords=WARN,WARNING,XXX<cr>", desc = "View WARNINGS" },
+        ["<Leader>Tn"] = { "<cmd>TodoTelescope keywords=NOTE,INFO<cr>", desc = "View NOTE's" },
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
       },
